@@ -5,6 +5,7 @@
 * @c: Character to print
 * Return: Success.
 */
+
 int print_c(va_list c)
 {
 	char charact = (char)va_arg(c, int);
@@ -18,6 +19,7 @@ int print_c(va_list c)
 * @s: String to print
 * Return: Success.
 */
+
 int print_s(va_list s)
 {
 	char *string = va_arg(s, char*);
@@ -33,3 +35,16 @@ int print_s(va_list s)
 	return (i);
 }
 
+/**
+* print_percent - Print output percent
+* @%: Percent to print
+* Return: Success.
+*/
+
+int print_percent(va_list %)
+{
+	char percent = va_arg(%, char);
+
+	_putchar(percent);
+	return (1);
+}
