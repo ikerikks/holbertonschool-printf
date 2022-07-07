@@ -18,7 +18,7 @@ int (*print_format(const char *format))(va_list)
 
 	for (; type[j].s != NULL; j++)
 	{
-		if (type[j].s == *format)
+		if (*(type[j].s) == *format)
 			break;
 	}
 	return (type[j].i);
