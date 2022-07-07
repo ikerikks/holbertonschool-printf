@@ -25,7 +25,7 @@ int (*print_format(const char *format))(va_list)
 }
 
 /**
-* _printf - function that produces output of format 
+* _printf - function that produces output of format
 * @format: a pointer to produce
 * @...: others
 * Return: the number of characters print
@@ -35,7 +35,6 @@ int _printf(const char *format, ...)
 {
 	va_list list;
 	int (*f)(va_list);
-
 	unsigned int y = 0, x = 0;
 
 	if (format == NULL)
@@ -52,7 +51,7 @@ int _printf(const char *format, ...)
 			y++;
 			continue;
 		}
-		else 
+		else
 		{
 			if (format[y + 1] == '%')
 			{
