@@ -5,15 +5,21 @@
 * @format: Format to print
 * return: If success.
 */
-int (*print_format(const char *format))(va_list)
+int _printf(const char *format, ...)
 {
-	
-	print_f type[] = {
+	print_t type[] = {
 			{"c", print_c},
 			{"s", print_s},
-			{"%", print_percent},
 			{NULL, NULL}
 	};
-	
 
+	int j = 0;
+
+	while (j < 10)
+	{
+		if (format[0] == type->s[j])
+			break;
+		j++;
+	}
+	return (j);
 }
