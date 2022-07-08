@@ -56,6 +56,7 @@ int _printf(const char *format, ...)
 			if (format[y + 1] == '%')
 			{
 				_putchar('%');
+				x++;
 				y += 2;
 				continue;
 			}
