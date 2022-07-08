@@ -1,13 +1,13 @@
 #include "main.h"
 #include <stdarg.h>
 #include <stdio.h>
-
+#include <unistd.h>
 /**
 * print_format - Print all format
 * @format: Format to print
 * return: If success.
 */
-int (*print_format(const char *format))(va_list)
+static int (*print_format(const char *format))(va_list)
 {
 	int j = 0;
 	print_t type[] = {
@@ -25,12 +25,34 @@ int (*print_format(const char *format))(va_list)
 }
 
 /**
+ * print_nan - writes chars after a % if they
+ * don't match anything in the struct
+ * @ch1: the first char passed (always %)
+ * @ch2: the char after the %
+ * Return: 1 if ch2 is a % and 2 is ch2 is anything else
+ */
+
+int print_nan(char ch1, char ch2)
+{
+	if (ch2 == '%')
+	{
+		write(1, &ch2, 1);
+		return (1);
+	}
+	else
+	{
+		write(1, &ch1, 1);
+		write(1, &ch2, 1);
+		return (2);
+	}
+}
+
+/**
 * _printf - function that produces output of format
 * @format: a pointer to produce
 * @...: others
 * Return: the number of characters print
 */
-
 int _printf(const char *format, ...)
 {
 	va_list list;
@@ -39,36 +61,24 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
-
 	va_start(list, format);
-
-	while (format && format[y])
+	while (format[y] != '\0')
 	{
-		if (format[y] != '%' || format[y] != '\0')
+		if (format[y] == '%')
 		{
-			_putchar(format[y]);
+			if (format[y + 1] == '\0')
+				return (-1);
+			f = print_format(&format[y + 1]);
+			if (f == NULL)
+				x += print_nan(format[y], format[y + 1]);
+			else
+				x += f(list);
 			y++;
-			x++;
-			continue;
 		}
 		else
 		{
-			if (format[y + 1] == '%')
-			{
-				_putchar('%');
-				x++;
-				y += 2;
-				continue;
-			}
-			else
-			{
-				f = print_format(&format[y + 1]);
-				if (f == NULL)
-					return (-1);
-				y += 2;
-				x += f(list);
-				continue;
-			}
+			_putchar(format[y]);
+			x++;
 		}
 		y++;
 	}
