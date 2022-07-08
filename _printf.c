@@ -80,7 +80,6 @@ int _printf(const char *format, ...)
 		{
 			_putchar(format[y]);
 			x++;
-			if (format[y + 1] == '%')
 		}
 		y++;
 	}
