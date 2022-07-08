@@ -63,7 +63,7 @@ int _printf(const char *format, ...)
 			else
 			{
 				f = print_format(&format[y + 1]);
-				if (f == NULL)
+				if (f != NULL)
 					return (-1);
 				y += 2;
 				x += f(list);
