@@ -42,7 +42,7 @@ int _printf(const char *format, ...)
 
 	va_start(list, format);
 
-	while (format[y])
+	while (format && format[y])
 	{
 		if (format[y] != '%' || format[y] != '\0')
 		{
@@ -51,8 +51,7 @@ int _printf(const char *format, ...)
 			x++;
 			continue;
 		}
-		else
-		{
+		
 			if (format[y + 1] == '%')
 			{
 				_putchar('%');
@@ -69,7 +68,7 @@ int _printf(const char *format, ...)
 				x += f(list);
 				continue;
 			}
-		}
+		
 		y++;
 	}
 	va_end(list);
