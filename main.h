@@ -18,4 +18,5 @@ int print_nan(char ch1, char ch2);
 int _printf(const char *format, ...);
 int print_c(va_list c);
 int print_s(va_list s);
+int print_d(va_list d);
 #endif

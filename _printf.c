@@ -14,6 +14,7 @@ static int (*print_format(const char *format))(va_list)
 	print_t type[] = {
 		{"c", print_c},
 		{"s", print_s},
+		{"d", print_d},
 		{NULL, NULL}
 	};
 	for (; type[j].s != NULL; j++)
