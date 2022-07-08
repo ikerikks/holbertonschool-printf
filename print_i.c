@@ -2,17 +2,17 @@
 #include <stdlib.h>
 
 /**
-* print_d - Print output decimal
-* @d: Decimal to print
+* print_i - Print output integer
+* @i: Integer to print
 * Return: Success.
 */
 
-int print_d(va_list d)
+int print_i(va_list i)
 {
 	int base[10];
 	int a = 1, max = 1000000000, n, sum = 0, count = 0;
 
-	n = va_arg(d, int);
+	n = va_arg(i, int);
 
 	if (n < 0)
 	{
