@@ -46,8 +46,8 @@ int _printf(const char *format, ...)
 	{
 		if (format[y] != '%')
 		{
-			_putchar(format[y]);
 			y++;
+			_putchar(format[y]);
 			continue;
 		}
 		else
