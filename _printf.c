@@ -5,17 +5,16 @@
 /**
 * print_format - Print all format
 * @format: Format to print
-* return: If success.
+* Return: Pointer to valid function or NULL
 */
 static int (*print_format(const char *format))(va_list)
 {
 	int j = 0;
 	print_t type[] = {
-			{"c", print_c},
-			{"s", print_s},
-			{NULL, NULL}
+		{"c", print_c},
+		{"s", print_s},
+		{NULL, NULL}
 	};
-
 	for (; type[j].s != NULL; j++)
 	{
 		if (*(type[j].s) == *format)
