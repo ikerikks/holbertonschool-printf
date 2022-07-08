@@ -56,17 +56,20 @@ int _printf(const char *format, ...)
 		{
 			if (format[y + 1] == '%')
 			{
-				_putchar(format[y + 1]);
+				_putchar(format[y]);
 				x++;
 				y += 2;
 				continue;
 			}
+			else
+			{
 				f = print_format(&format[y + 1]);
 				if (f == NULL)
 					return (-1);
 				y += 2;
 				x += f(list);
 				continue;
+			}
 		}
 		
 		y++;

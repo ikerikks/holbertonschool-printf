@@ -13,6 +13,8 @@ int main(void)
 
 	len = _printf("%K\n");
 	len2 = printf("%K\n");
+	len = _printf("%c", '\0');
+	len2 = printf("%c", '\0');
 	fflush(stdout);
 	if (len != len2)
 	{
