@@ -78,26 +78,10 @@ int _printf(const char *format, ...)
 
 		else
 		{
-<<<<<<< HEAD
 			_putchar(format[y]);
 			x++;
-=======
 			if (format[y + 1] == '%')
-			{
-				_putchar(format[y + 1]);
-				x++;
-				y += 2;
-				continue;
-			}
-				f = print_format(&format[y + 1]);
-				if (f == NULL)
-					return (-1);
-				y += 2;
-				x += f(list);
-				continue;
->>>>>>> e3ab4eeea51ec8754214cafdbea86475f76d1ec3
 		}
-		
 		y++;
 	}
 	va_end(list);
