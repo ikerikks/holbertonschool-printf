@@ -51,10 +51,12 @@ int _printf(const char *format, ...)
 			x++;
 			continue;
 		}
-		
+
+		else
+		{
 			if (format[y + 1] == '%')
 			{
-				_putchar('%');
+				_putchar(format[y + 1]);
 				x++;
 				y += 2;
 				continue;
@@ -68,6 +70,7 @@ int _printf(const char *format, ...)
 				x += f(list);
 				continue;
 			}
+		}
 		
 		y++;
 	}
