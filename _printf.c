@@ -42,7 +42,7 @@ int _printf(const char *format, ...)
 
 	va_start(list, format);
 
-	while (format && format[y])
+	while (format[y])
 	{
 		if (format[y] != '%' || format[y] != '\0')
 		{
