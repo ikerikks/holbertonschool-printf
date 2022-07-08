@@ -77,27 +77,8 @@ int _printf(const char *format, ...)
 
 		else
 		{
-<<<<<<< HEAD
-			if (format[y + 1] == '%')
-			{
-				_putchar(format[y]);
-				x++;
-				y += 2;
-				continue;
-			}
-			else
-			{
-				f = print_format(&format[y + 1]);
-				if (f == NULL)
-					return (-1);
-				y += 2;
-				x += f(list);
-				continue;
-			}
-=======
 			_putchar(format[y]);
 			x++;
->>>>>>> b3242d7e113598e31f1541b9f4f1a7737257e816
 		}
 		y++;
 	}
