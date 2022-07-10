@@ -175,9 +175,9 @@ $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 
 ## :busts_in_silhouette:  About us :dart:
 
-This, is the first group project at Holberton School ! :school: :computer:
-We hope you enjoy our project ! :smile:
-For more questions, don't hesitate to contact us in our links down below. :wink:
+This, is the first group project at Holberton School ! :school: :computer:<br/>
+We hope you enjoy our project ! :smile:<br/>
+For more questions, don't hesitate to contact us in our links down below. :wink:<br/>
 Made by: 
 * **Yeh-Hsin (mia) Lee**: [Github](https://github.com/mimi-fOlle) / [Linkedin](https://www.linkedin.com/in/yeh-hsin-lee-74922a23b/)
 * **Chong Leang Ueng:** [Github](https://github.com/ChongLeangUENG) / [Linkedin](https://www.linkedin.com/in/chong-leang-ueng-78521b23b/)
