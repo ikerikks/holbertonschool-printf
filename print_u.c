@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdarg.h>
 
 /**
 * print_u - Print output decimal unsigned int
@@ -10,8 +11,9 @@
 int print_u(va_list u)
 {
 	int base[10];
-	int a, n;
-	unsigned int max = 1000000000, sum = 0, count = 0;
+	unsigned int n;
+	unsigned int a, max = 1000000000, sum = 0;
+	int count = 0;
 
 	n = va_arg(u, unsigned int);
 
@@ -20,13 +22,6 @@ int print_u(va_list u)
 	{
 		max /= 10;
 		base[a] = (n / max) % 10;
-	}
-	if (n < 0)
-	{
-		_putchar('-');
-		count++;
-		for (a = 0; a < 10; a++)
-			base[a] *= -1;
 	}
 
 	for (a = 0; a < 10; a++)
