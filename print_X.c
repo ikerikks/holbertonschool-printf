@@ -14,7 +14,7 @@ int print_X(va_list X)
 	int count;
 
 	n = va_arg(X, unsigned int);
-	diff = 'a' - ':';
+	diff = 'A' - ':';
 	bash[0] = n / m;
 	for (; o < 8; o++)
 	{
