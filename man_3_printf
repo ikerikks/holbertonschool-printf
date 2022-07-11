@@ -52,6 +52,16 @@ Use to print number of characters written by this printf.
 .SH RETURN VALUES
 If the function successfully executes, it returns the total number of characters written to the standard output. If an error occurs, a negative number is returned.
 
+.SH EXAMPLE
+.SH
+.SH #include "main.h"
+.SH int main(void)
+.SH {
+.SH _printf("%s%%", "Hello World");
+.SH return (0);
+.SH }
+.SH
+
 .SH SEE ALSO
 .I printf(3)
 
