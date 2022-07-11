@@ -4,14 +4,14 @@
 
 /**
 * print_o - Print output octal
-* @d: Octal to print
+* @o: Octal to print
 * Return: Success.
 */
 
 int print_o(va_list o)
 {
 	unsigned int base[11];
-	unsigned int a, max = 1073741824, n, sum, 
+	unsigned int a, max = 1073741824, n, sum;
 	int count;
 
 	n = va_arg(o, unsigned int);
