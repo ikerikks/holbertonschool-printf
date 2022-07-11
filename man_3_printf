@@ -6,19 +6,33 @@
 .B _printf \- sends formatted output to standard output. 
 
 .SH SYNOPSIS
-.SH
-.SH #include "main.h"
-.SH int _printf(const char *format, …)
-.SH _printf [format to print]
-.SH return
-.SH
+
+.B #include "main.h"
+.sp
+int _printf(const char *format, …)
+.sp
+_printf [format to print]
 
 .SH DESCRIPTION
 
 The _printf() function produces output according to a format which is described
 below. This function write its output to the stdout, the standard output stream.
 
-.SH USAGE
+Print ARGUMENT(s) according to FORMAT:
+
+\\"     double quote.
+
+\\\\     backslash.
+
+\\n     new line.
+
+\\r     carriage return.
+
+\\t     horizontal tab.
+
+%%     a single %.
+
+USAGE:
 
 .IP %c: 
 Use to print characters
