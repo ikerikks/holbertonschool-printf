@@ -93,6 +93,7 @@ The Type field can be any of:
 |%% |Prints a % character. (No argument expected) |
 |d or i |int as a signed [integer](https://en.wikipedia.org/wiki/Integer "Integer"). %d and %i are synonymous for output, but are different when used with [scanf](https://en.wikipedia.org/wiki/Scanf "Scanf") for input (where using %i will interpret a number as hexadecimal if it's preceded by 0x, and octal if it's preceded by 0.) |
 |u | decimal unsigned int. |
+|b | Prints binary. |
 |f, F |double in normal ([fixed-point](https://en.wikipedia.org/wiki/Fixed-point_arithmetic "Fixed-point arithmetic")) notation. f and F only differs in how the strings for an infinite number or NaN are printed (inf, infinity and nan for f; INF, INFINITY and NAN for F). |
 |e, E |double value in standard form (_d_._ddd_e±_dd_). An E conversion uses the letter E (rather than e) to introduce the exponent. The exponent always contains at least two digits; if the value is zero, the exponent is 00. In Windows, the exponent contains three digits by default, e.g. 1.5e002, but this can be altered by Microsoft-specific `_set_output_format` function. |
 |g, G |double in either normal or exponential notation, whichever is more appropriate for its magnitude. g uses lower-case letters, G uses upper-case letters. This type differs slightly from fixed-point notation in that insignificant zeroes to the right of the decimal point are not included. Also, the decimal point is not included on whole numbers. |
