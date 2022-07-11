@@ -2,20 +2,20 @@
 #include <stdlib.h>
 
 /**
- * print_x - A function that conversion unsigned hexadecimal
- * @x: format to print
+ * print_X - A function that conversion unsigned hexadecimal
+ * @X: format to print
  * Return: Number of printed char
  */
-int print_x(va_list x)
+int print_X(va_list X)
 {
 	unsigned int bash[8];
 	unsigned int n, m, o, sum;
 	char diff;
 	int count;
 
-	n = va_arg(x, unsigned int);
+	n = va_arg(X, unsigned int);
 	m = 268435456;
-	diff = 'a' - ':';
+	diff = 'A' - ':';
 	bash[0] = n / m;
 	for (o = 1; o < 8; o++)
 	{

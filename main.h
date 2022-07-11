@@ -22,8 +22,6 @@ int print_d(va_list d);
 int print_i(va_list i);
 int print_b(va_list b);
 int print_o(va_list o);
-<<<<<<< HEAD
 int print_x(va_list x);
-=======
->>>>>>> e302aa0939ece39e2e96581f1526bc110b81ff87
+int print_X(va_list X);
 #endif
