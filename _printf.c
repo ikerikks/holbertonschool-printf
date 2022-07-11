@@ -17,6 +17,7 @@ static int (*print_format(const char *format))(va_list)
 		{"d", print_d},
 		{"i", print_i},
 		{"b", print_b},
+		{"o", print_o},
 		{NULL, NULL}
 	};
 	for (; type[j].s != NULL; j++)
