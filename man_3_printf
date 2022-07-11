@@ -1,6 +1,6 @@
-./This is the man page of project C: printf of Holberton School cohort18
+./This is the man page of project C: printf of Holberton School Paris cohort18
 
-.TH printf 3 "11 July 2022" "Printf man page"
+.TH printf 3 "Paris, 11 July 2022" "Printf man page"
 
 .SH NAME
 .B _printf \- sends formatted output to standard output. 
@@ -26,7 +26,7 @@ Use to print characters
 Use to print string of character
 .IP %%: 
 Use to print a % character
-.IP %d or %i: 
+.IP %d,%i: 
 Use to print integers of max and min in base of 10
 .IP %b:
 Use to print binary
@@ -48,6 +48,8 @@ Use to print void* (pointer to void) in an implementation-defined format
 Use to print double in hexadecimal notation, starting with 0x or 0X.
 .IP %n:
 Use to print number of characters written by this printf.
+.IP %,%..:
+If the character after the modulo are not in the list of _printf or signle modulo, so it prints also the modulo with the character that we put.
 
 .SH RETURN VALUES
 If the function successfully executes, it returns the total number of characters written to the standard output. If an error occurs, a negative number is returned.
