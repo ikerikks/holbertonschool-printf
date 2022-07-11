@@ -126,6 +126,7 @@ The \n used in the `printf` statements is called an escape sequence. In this cas
 **man or help**:
 
 -   `printf (3)`
+- `man_3_printf` : our own manual page that we created for **_printf (3)** function
 
 ## Requirements
 
