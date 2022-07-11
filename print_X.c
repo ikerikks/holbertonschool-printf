@@ -9,20 +9,19 @@
 int print_X(va_list X)
 {
 	unsigned int bash[8];
-	unsigned int n, m, o, sum;
+	unsigned int n, m = 268435456, o = 1, sum = 0;
 	char diff;
 	int count;
 
 	n = va_arg(X, unsigned int);
-	m = 268435456;
-	diff = 'A' - ':';
+	diff = 'a' - ':';
 	bash[0] = n / m;
-	for (o = 1; o < 8; o++)
+	for (; o < 8; o++)
 	{
 		m /= 16;
 		bash[o] = (n / m) % 16;
 	}
-	for (o = 0; o < 8; o++)
+	for (o = 0, count = 0; o < 8; o++)
 	{
 		sum += bash[o];
 		if (sum || o == 7)
