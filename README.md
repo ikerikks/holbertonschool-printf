@@ -90,7 +90,6 @@ The Type field can be any of:
 |Character  |Description  |
 |--|--|
 |%  |Prints a literal % character (this type doesn't accept any flags, width, precision, length fields).  |
-|%% |Prints a % character. (No argument expected) |
 |d or i |int as a signed [integer](https://en.wikipedia.org/wiki/Integer "Integer"). %d and %i are synonymous for output, but are different when used with [scanf](https://en.wikipedia.org/wiki/Scanf "Scanf") for input (where using %i will interpret a number as hexadecimal if it's preceded by 0x, and octal if it's preceded by 0.) |
 |u | decimal unsigned int. |
 |b | Prints binary. |
