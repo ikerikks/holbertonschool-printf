@@ -117,16 +117,7 @@ The \n used in the `printf` statements is called an escape sequence. In this cas
 
 ## Resources
 
-**Read or watch**:
-
 -   [Secrets of printf](https://intranet.hbtn.io/rltoken/VUKsf4GzSLQ6jD07Q8jyMQ "Secrets of printf")
--   **Group Projects**  concept page (_Don’t forget to read this_)
--   **Flowcharts**  concept page
-
-**man or help**:
-
--   `printf (3)`
-- `man_3_printf` : our own manual page that we created for **_printf (3)** function
 
 ## Requirements
 
